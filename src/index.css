@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-manrope: 'Manrope', sans-serif;
+  --font-satoshi: 'Satoshi', sans-serif;
+}
+
+/* Improve smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enable hardware acceleration */
+* {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  will-change: transform;
+}
+
+body {
+  font-family: var(--font-manrope);
+  color: #00000000;
+  background: transparent;
+}
+
+.font-satoshi {
+  font-family: var(--font-satoshi);
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-indigo-600 to-indigo-800;
+}
+
+.hero-gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-indigo-600 to-indigo-800;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-b from-indigo-600 to-indigo-900;
+}
+
+.btn-gradient {
+  @apply bg-gradient-to-b from-indigo-500 to-indigo-800 text-white hover:from-indigo-600 hover:to-indigo-900 transition-all duration-300 ease-out;
+}
+
+.btn-gradient-light {
+  @apply bg-gradient-to-b from-indigo-400 to-indigo-600 text-white hover:from-indigo-500 hover:to-indigo-700 transition-all duration-300 ease-out;
+}
+
+/* Optimize animations */
+.animate-smooth {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+section {
+  @apply bg-white/40;
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 sm:py-20 md:py-24;
+  }
+  
+  .heading-xl {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black;
+  }
+  
+  .heading-lg {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight text-black;
+  }
+  
+  .heading-md {
+    @apply text-2xl sm:text-3xl font-bold text-black;
+  }
+  
+  .body-lg {
+    @apply text-lg text-black;
+  }
+  
+  .body-md {
+    @apply text-base text-black;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-full font-semibold transition-all duration-300 ease-out;
+  }
+  
+  .card {
+    @apply bg-white/90 rounded-2xl p-6 shadow-lg border border-gray-200;
+  }
+}
