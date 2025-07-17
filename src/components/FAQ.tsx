@@ -120,9 +120,9 @@ const FAQ = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center text-gray-600 mt-12"
         >
-          Need help with something else? Simply send us an email at{' '}
-          <a href="mailto:support@mvpstudio.com" className="font-bold text-indigo-600 hover:text-indigo-500 transition-colors">
-            support@mvpstudio.com
+          Need help with something else? Simply WhatsApp us at{' '}
+          <a href="" className="font-bold text-indigo-600 hover:text-indigo-500 transition-colors">
+            +91 7232085151
           </a>
         </motion.p>
       </div>
