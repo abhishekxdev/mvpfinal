@@ -20,11 +20,6 @@ const TestimonialCard = ({ name, role, company, content, image }: TestimonialCar
   >
     <div className="relative z-10">
       <div className="flex items-center gap-4 mb-6">
-        <img 
-          src={image} 
-          alt={name} 
-          className="w-12 h-12 rounded-full object-cover"
-        />
         <div>
           <h4 className="font-bold text-gray-900">{name}</h4>
           <p className="text-sm text-gray-600">{role} @ {company}</p>
