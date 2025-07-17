@@ -80,7 +80,7 @@ const Portfolio = () => {
       delay: 0.3,
     },
     {
-      title: 'Don Platform',
+      title: 'Nebula Flow Platform',
       description: 'A modern business platform designed to streamline operations and enhance productivity with clean interfaces and powerful functionality.',
       image: '/images/don.png',
       categories: ['Business', 'Platform', 'Productivity'],
