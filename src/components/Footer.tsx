@@ -46,11 +46,10 @@ const Footer = () => {
             className="text-left"
           >
             <div className="mb-8">
-              <img
-                src="/images/Variant 1.png"
-                alt="MVPStudio"
-                className="h-16"
-              />
+              <div className="flex items-center gap-2">
+                <img src="/images/MS.png" alt="MS Logo" className="h-8 w-8 object-contain" />
+                <span className="text-3xl font-extrabold tracking-tight text-black font-[Manrope,sans-serif]">FlowBit</span>
+              </div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-gray-900">Let's Build Something Great Together</h2>
             <p className="text-lg text-gray-600 mb-8">
