@@ -13,7 +13,7 @@ const WorkCard = ({ imagePath }: { imagePath: string }) => (
 
 const RecentWork = () => {
   const images = [
-    '/images/finc.png',
+    '/images/serene.png',
     '/images/crm.png',
     '/images/don.png',
     '/images/emailai.png',
