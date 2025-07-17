@@ -24,7 +24,7 @@ const Hero = () => {
          
           
 <h1 className="text-5xl md:text-7xl font-inter font-extrabold text-black mb-2 leading-[1.2]">
-  Start Smart – MVPs That<br />
+  Start Smart – Products That<br />
   <span className="font-inter font-extrabold gradient-text">Dominate</span> and <span className="font-inter font-extrabold gradient-text leading-[1.2]">Grow</span><br />
 </h1>
 
