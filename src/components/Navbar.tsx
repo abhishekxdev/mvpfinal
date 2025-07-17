@@ -20,11 +20,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <img
-              src="/images/Variant 1.png"
-              alt="MVP Experience"
-              className="h-16 w-52 object-contain"
-            />
+            <img src="/images/MS.png" alt="MS Logo" className="h-8 w-8 object-contain" />
+            <span className="text-3xl font-extrabold tracking-tight text-black font-[Manrope,sans-serif]">FlowBit</span>
           </a>
 
           {/* Nav Links */}
@@ -38,20 +35,6 @@ const Navbar = () => {
 
           {/* CTA and Social Buttons */}
           <div className="flex items-center gap-4">
-            {/* X (Twitter) Button */}
-            <a
-              href="https://x.com/abhishekxbiz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:flex items-center"
-            >
-              <img
-                src="/images/xlogo-Photoroom.png"
-                alt="X (Twitter)"
-                className="h-12 w-13"
-              />
-            </a>
-
             {/* Book Call Button */}
             <a
               href="https://calendly.com/vishnoiabhishek29/30min"
@@ -109,22 +92,6 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              {/* Mobile X (Twitter) Link */}
-              <li>
-                <a
-                  href="https://x.com/abhishekxbiz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-2 font-medium text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <img
-                    src="/images/xlogo-Photoroom.png"
-                    alt="X (Twitter)"
-                    className="h-4 w-4"
-                  />
-                  <span>Follow on X</span>
-                </a>
-              </li>
             </ul>
           </div>
         </motion.div>
