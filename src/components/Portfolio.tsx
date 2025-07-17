@@ -3,13 +3,24 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink } from 'lucide-react';
 
-const PortfolioItem = ({ title, description, image, categories, services, delay, inView }) => {
+type PortfolioItemProps = {
+  title: string;
+  description: string;
+  image: string;
+  categories: string[];
+  services: string;
+  delay: number;
+  inView: boolean;
+};
+
+const PortfolioItem = ({ title, description, image, categories, services, delay, inView }: PortfolioItemProps) => {
+  const isApplex = title === 'Applex';
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6, delay }}
-      className="box relative transform-gpu rounded-2xl overflow-hidden"
+      className={`relative transform-gpu rounded-2xl overflow-hidden${!isApplex ? ' box' : ''}`}
       style={{
         transformStyle: 'preserve-3d',
         borderRadius: '16px'
@@ -28,7 +39,7 @@ const PortfolioItem = ({ title, description, image, categories, services, delay,
           <p className="text-gray-600 mb-4">{description}</p>
           
           <div className="flex flex-wrap gap-2 mb-4">
-            {categories.map((category, index) => (
+            {categories.map((category: string, index: number) => (
               <span 
                 key={index}
                 className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
@@ -134,21 +145,6 @@ const Portfolio = () => {
             <PortfolioItem key={index} {...item} inView={inView} />
           ))}
         </div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-12 flex justify-center"
-        >
-          <a 
-            href="#contact" 
-            className="btn btn-gradient rounded-full flex items-center justify-center gap-2 group"
-          >
-            See More Case Studies
-            <ExternalLink size={18} className="transition-transform group-hover:translate-x-1" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
