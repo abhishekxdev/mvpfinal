@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink } from 'lucide-react';
 
 type PortfolioItemProps = {
   title: string;
@@ -14,13 +13,12 @@ type PortfolioItemProps = {
 };
 
 const PortfolioItem = ({ title, description, image, categories, services, delay, inView }: PortfolioItemProps) => {
-  const isApplex = title === 'Applex';
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6, delay }}
-      className={`relative transform-gpu rounded-2xl overflow-hidden${!isApplex ? ' box' : ''}`}
+      className="relative transform-gpu rounded-2xl overflow-hidden box"
       style={{
         transformStyle: 'preserve-3d',
         borderRadius: '16px'
@@ -66,36 +64,52 @@ const Portfolio = () => {
 
   const portfolioItems = [
     {
-      title: 'Nuro AI',
-      description: 'We crafted Nuro AI\'s digital presence to clearly communicate how it transforms sales with intelligent automation and real-time insights.',
-      image: '/images/portfolio2.jpg',
-      categories: ['SaaS', 'AI'],
-      services: 'Web Design  -  Animation',
+      title: 'Horoscope AI',
+      description: 'An AI-powered horoscope application that provides personalized astrological insights and predictions with modern design and intuitive user experience.',
+      image: '/images/horoscope.PNG',
+      categories: ['AI', 'Mobile App', 'Astrology'],
+      services: 'App Design - AI Integration - UX/UI',
       delay: 0.2,
     },
     {
-      title: 'Wealth AI',
-      description: 'We brought Wealth AI to life with dynamic visuals and smooth flows that reflect its futuristic financial vision.',
-      image: '/images/portfolio3.jpg',
-      categories: ['Agency', 'Web Design', 'B2B'],
-      services: 'Web Design  -  Copywriting  -  App Design',
+      title: 'CRM Dashboard',
+      description: 'A comprehensive customer relationship management system with advanced analytics, lead tracking, and automated workflows for sales teams.',
+      image: '/images/crm.png',
+      categories: ['SaaS', 'CRM', 'Analytics'],
+      services: 'Web Design - Dashboard Design - Data Visualization',
       delay: 0.3,
     },
     {
-      title: 'FlowHive',
-      description: 'We built FlowHive\'s platform from the ground up, combining structured interface logic with sleek animations for a better productivity experience.',
-      image: '/images/portfolio1.jpg',
-      categories: ['SaaS', 'Productivity', 'UI/UX'],
-      services: 'Web Design  -  Animation  -  Product Design',
+      title: 'Don Platform',
+      description: 'A modern business platform designed to streamline operations and enhance productivity with clean interfaces and powerful functionality.',
+      image: '/images/don.png',
+      categories: ['Business', 'Platform', 'Productivity'],
+      services: 'Web Design - Platform Development - UX Strategy',
       delay: 0.4,
     },
     {
-      title: 'Applex',
-      description: 'For Applex, we created a clean and mobile-first website that brings clarity to team collaboration through soft visuals and purposeful UX.',
-      image: '/images/portfolio4.jpg',
-      categories: ['Mobile', 'SaaS', 'Collaboration'],
-      services: 'Web Design  -  Product Design',
+      title: 'Email AI Assistant',
+      description: 'An intelligent email management system that uses AI to automate responses, categorize emails, and improve communication efficiency.',
+      image: '/images/emailai.png',
+      categories: ['AI', 'Email', 'Automation'],
+      services: 'AI Integration - Email Design - Automation',
       delay: 0.5,
+    },
+    {
+      title: 'Nuro Deep Analytics',
+      description: 'Advanced analytics platform providing deep insights into business data with interactive visualizations and predictive modeling capabilities.',
+      image: '/images/nurodeep.png',
+      categories: ['Analytics', 'Data Science', 'SaaS'],
+      services: 'Data Visualization - Analytics Design - Dashboard',
+      delay: 0.6,
+    },
+    {
+      title: 'Outreach Pro',
+      description: 'A comprehensive outreach and marketing automation platform designed to help businesses scale their customer acquisition efforts.',
+      image: '/images/outreach.png',
+      categories: ['Marketing', 'Automation', 'SaaS'],
+      services: 'Web Design - Marketing Automation - UX Design',
+      delay: 0.7,
     }
   ];
 
@@ -140,7 +154,7 @@ const Portfolio = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((item, index) => (
             <PortfolioItem key={index} {...item} inView={inView} />
           ))}
