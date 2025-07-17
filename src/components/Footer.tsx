@@ -82,7 +82,7 @@ const Footer = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                 <p className="text-gray-500">
-                  ©{currentYear} MVPStudio. All rights reserved.
+                  ©{currentYear} FlowBit. All rights reserved.
                 </p>
                 <div className="flex gap-6 text-sm text-gray-500">
                   <a href="#" className="hover:text-gray-900 transition-colors">Privacy</a>
