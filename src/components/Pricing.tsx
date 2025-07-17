@@ -74,15 +74,15 @@ const Pricing = () => {
 
   const pricingOptions = [
     {
-      title: 'Landing Page',
-      price: '$999',
+      title: 'Landing Page Design',
+      price: 'Rs. 20,000',
       features: [
         'Single Page Design',
         'Responsive Layout',
         'Basic SEO Setup',
         'Contact Form Integration',
         '5 Day Delivery',
-        'Framer Development',
+       
         '2 design concepts',
         'Basic support',
       ],
@@ -90,10 +90,10 @@ const Pricing = () => {
       delay: 0.1,
     },
     {
-      title: 'Standard Plan',
-      price: '$1500',
+      title: 'Standard Full Stack Website',
+      price: 'Rs. 50,000',
       features: [
-        'MVP ready in 4–5 weeks',
+        'Website ready in 2-3 weeks',
         'Web & mobile apps with modern, scalable tech',
         'Seamless integrations: payments, auth & more',
         '30 days free maintenance post-launch',
@@ -105,7 +105,7 @@ const Pricing = () => {
     },
     {
       title: 'Growth Plan',
-      price: '$2500',
+      price: 'Rs. 75,000',
       features: [
         '60 hours of dev time each month',
         'Flexible hours, tailored to your needs',
